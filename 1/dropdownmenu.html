@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                overflow: hidden;
+            }
+            ul:hover {
+                overflow: visible;
+            }
+            li {
+                position: relative;
+                float: left;
+                background-color: #17B0FF;
+            }
+            li:hover {
+                background-color: #189BDF;
+            }
+            a {
+                display: block;
+                padding: 10px 20px;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            /* second level */
+            ul ul {
+                max-height: 0;
+                transition: max-height 1s;
+            }
+            ul li:hover ul {
+                max-height: 999px;
+            }
+            ul ul li {
+                float: none;
+                background-color: #189BDF;
+                display:inline-block;
+            }
+            ul ul div{
+                width:120px;
+                height:40px;
+                float:left;
+                display: table;
+            }
+            ul ul li:hover {
+                background-color: #1289C7;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#">Primary</a></li>
+            <li><a href="#">Primary</a></li>
+            <li><a href="#">Dropdown</a>
+              <ul>
+                <div>Secondary</div>
+                <div>Secondary</div>
+                <div>Secondary</div>
+                <div>Secondary</div>
+              </ul>
+            </li>
+            <li>
+                <a href="#">Primary</a><ul>
+                    <li><a href="#">Secondary</a></li>
+                  </ul>
+            </li>
+            <li><a href="#">Primary</a></li>
+          </ul>
+    </body>
+</html>
